@@ -175,7 +175,53 @@ form button:hover {
 }
 
 .contact-info a:hover {
-  text-decoration: underline;
+  text-decoration: underline;}
+
+.gallery {
+  text-align: center;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.gallery-item {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-item p {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
 }
 
 /* Footer */
