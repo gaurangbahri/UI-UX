@@ -1,0 +1,97 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f4f6f9; color: #333; }
+
+/* HEADER */
+#main-header {
+  background: linear-gradient(90deg, #004e92, #000428);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 4px solid #ffcc00;
+}
+
+/* NAV */
+nav {
+  background: #003366;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+nav a:hover { background: #ffcc00; color: #333; }
+
+/* SECTIONS */
+section { padding: 2rem 5%; }
+
+/* VIDEO */
+.video-section video {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+th, td { border: 1px solid #ccc; padding: 12px; }
+th { background: #004e92; color: white; }
+
+/* FORM */
+form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+form input, form select, form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+form button {
+  background: #004e92;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+form button:hover { background: #ffcc00; color: #333; }
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 15px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.gallery img:hover { transform: scale(1.05); }
+
+/* CONTACT */
+.contact-info {
+  background: #004e92;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+}
+.contact-info a { color: #ffcc00; }
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  nav { flex-direction: column; text-align: center; }
+  form { width: 90%; }
+}

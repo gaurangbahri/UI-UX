@@ -1,0 +1,15 @@
+body { margin:0; font-family:'Segoe UI', sans-serif; background:#f8f9fa; color:#333; }
+header { background:linear-gradient(45deg,#ff6f61,#ffb703,#8ecae6); color:white; text-align:center; padding:40px 20px; }
+nav { background:#023047; padding:10px; text-align:center; }
+nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
+nav a:hover { color:#ffb703; }
+section { padding:30px; text-align:center; }
+table { margin:auto; border-collapse:collapse; width:80%; background:#fff; }
+th,td { border:1px solid #ccc; padding:10px; }
+th { background:#ffb703; }
+form { max-width:400px; margin:auto; background:#fff; padding:20px; border-radius:10px; }
+form input,form select,textarea { width:100%; padding:10px; margin:8px 0; border:1px solid #ccc; border-radius:6px; }
+form input[type="submit"] { background:#ff6f61; color:white; border:none; cursor:pointer; font-weight:bold; }
+.gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; }
+.gallery img { width:100%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+footer { background:#023047; color:white; text-align:center; padding:15px; }
