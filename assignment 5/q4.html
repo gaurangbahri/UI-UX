@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Object Example</title>
+</head>
+<body>
+  <h2>Student Object Operations</h2>
+
+  <script>
+    // Create a student object
+    let student = {
+      name: "Rahul Sharma",
+      age: 20,
+      grades: {
+        math: 85,
+        science: 90,
+        english: 78
+      }
+    };
+
+    // Add a new property 'class'
+    student.class = "B.Tech - 2nd Year";
+
+    // Update the student's grade in math
+    student.grades.math = 92;
+
+    // Display all the student's information
+    document.write("<h3>Student Information:</h3>");
+    document.write("Name: " + student.name + "<br>");
+    document.write("Age: " + student.age + "<br>");
+    document.write("Class: " + student.class + "<br>");
+    document.write("Grades:<br>");
+    for (let subject in student.grades) {
+      document.write(subject + ": " + student.grades[subject] + "<br>");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods Example</title>
+</head>
+<body>
+  <h2>Array Operations using map(), filter(), and reduce()</h2>
+
+  <script>
+    function processArray(numbers) {
+      // Step 1: Remove all odd numbers
+      let evenNumbers = numbers.filter(num => num % 2 === 0);
+
+      // Step 2: Multiply the remaining numbers by 2
+      let multiplied = evenNumbers.map(num => num * 2);
+
+      // Step 3: Find the sum of the resulting numbers
+      let sum = multiplied.reduce((acc, curr) => acc + curr, 0);
+
+      // Display results
+      document.write("Original Array: " + numbers + "<br>");
+      document.write("Even Numbers: " + evenNumbers + "<br>");
+      document.write("After Multiplying by 2: " + multiplied + "<br>");
+      document.write("Sum of Resulting Numbers: " + sum + "<br>");
+    }
+
+    // Example usage
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    processArray(arr);
+  </script>
+</body>
+</html>

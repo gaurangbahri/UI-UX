@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Operations</title>
+</head>
+<body>
+  <h2>Array Operations in JavaScript</h2>
+
+  <script>
+    // Creating an array of 5 numbers
+    let numbers = [25, 10, 45, 5, 30];
+
+    // Finding largest and smallest using Math functions
+    let largest = Math.max(...numbers);
+    let smallest = Math.min(...numbers);
+
+   
+    let ascending = [...numbers].sort((a, b) => a - b);
+
+  
+    let descending = [...numbers].sort((a, b) => b - a);
+
+   
+    document.write("<h3>Original Array: " + numbers + "</h3>");
+    document.write("Largest Number: " + largest + "<br>");
+    document.write("Smallest Number: " + smallest + "<br>");
+    document.write("Sorted Ascending: " + ascending + "<br>");
+    document.write("Sorted Descending: " + descending + "<br>");
+  </script>
+</body>
+</html>

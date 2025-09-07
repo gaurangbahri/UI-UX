@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    form {
+      max-width: 400px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Simple Form</h2>
+
+  <form id="myForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <span id="nameError" class="error"></span><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+    <span id="emailError" class="error"></span><br>
+
+    <label for="age">Age:</label><br>
+    <input type="text" id="age" name="age"><br>
+    <span id="ageError" class="error"></span><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent form from submitting
+
+      // Get field values
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let age = document.getElementById("age").value.trim();
+
+      // Error spans
+      let nameError = document.getElementById("nameError");
+      let emailError = document.getElementById("emailError");
+      let ageError = document.getElementById("ageError");
+
+      // Reset error messages
+      nameError.textContent = "";
+      emailError.textContent = "";
+      ageError.textContent = "";
+
+      let isValid = true;
+
+      // Validate name
+      if (name === "") {
+        nameError.textContent = "Name cannot be empty";
+        isValid = false;
+      }
+
+      // Validate email (simple regex)
+      let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/i;
+      if (!emailPattern.test(email)) {
+        emailError.textContent = "Invalid email format";
+        isValid = false;
+      }
+
+      // Validate age
+      let ageNumber = Number(age);
+      if (isNaN(ageNumber) || ageNumber < 18 || ageNumber > 100) {
+        ageError.textContent = "Age must be a number between 18 and 100";
+        isValid = false;
+      }
+
+      // If valid, show success
+      if (isValid) {
+        alert("Form submitted successfully!");
+      }
+    });
+  </script>
+</body>
+</html>
