@@ -1,0 +1,167 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f7fa;
+  margin: 0;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #004e92, #000428);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Navigation */
+nav {
+  background: #003366;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.8rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  color: #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* Sections */
+section {
+  padding: 2rem 8%;
+}
+
+h2 {
+  color: #004e92;
+  border-bottom: 3px solid #004e92;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #004e92;
+  color: white;
+}
+
+/* Form */
+form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin-top: 2rem;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #004e92;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+form button:hover:not(:disabled) {
+  background: #ffcc00;
+  color: #333;
+}
+
+#totalPrice {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #004e92;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #003366;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}

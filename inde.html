@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS :active Pseudo Class</title>
+  <style>
+    .box {
+      background-color: yellow;
+      width: 300px;
+      height: 200px;
+      margin: auto;
+      font-size: 40px;
+      text-align: center;
+      line-height: 200px; /* vertically center text */
+      border: 2px solid black;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .box:active {
+      background-color: orange;
+    }
+
+    h1, h2 {
+      color: green;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Selector</h1>
+  <h2>:active Pseudo-class</h2>
+
+  <div class="box">
+    My color changes for a moment if you click me!
+  </div>
+</body>
+</html>

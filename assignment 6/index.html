@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Packages & Booking</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1>Travel Packages Portal</h1>
+    <p>Dynamic Packages • Booking Estimator • Interactive Gallery</p>
+  </header>
+
+  <nav>
+    <a href="#packages" class="active">Packages</a>
+    <a href="#booking">Booking</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+
+  <!-- ====== PACKAGES SECTION ====== -->
+  <section id="packages">
+  <h2>Available Packages</h2>
+  <table id="packagesTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Destination</th>
+        <th>Duration (Days)</th>
+        <th>Base Price (₹)</th>
+        <th>Season</th>
+        <th>Final Price (₹)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Goa</td>
+        <td>4</td>
+        <td>12,000</td>
+        <td>Summer</td>
+        <td>13,200</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Manali</td>
+        <td>5</td>
+        <td>15,000</td>
+        <td>Winter</td>
+        <td>19,000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Jaipur</td>
+        <td>3</td>
+        <td>10,000</td>
+        <td>Spring</td>
+        <td>10,000</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Kerala</td>
+        <td>6</td>
+        <td>18,000</td>
+        <td>Monsoon</td>
+        <td>17,200</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+  <!-- ====== BOOKING FORM SECTION ====== -->
+  <section id="booking">
+    <h2>Booking Price Estimator</h2>
+    <form id="bookingForm">
+      <label for="packageSelect">Select Package:</label>
+      <select id="packageSelect" required>
+        <option value="">--Choose Package--</option>
+      </select>
+
+      <label for="checkIn">Check-In Date:</label>
+      <input type="date" id="checkIn" required>
+
+      <label for="checkOut">Check-Out Date:</label>
+      <input type="date" id="checkOut" required>
+
+      <label for="guests">Guests:</label>
+      <input type="number" id="guests" min="1" required>
+
+      <label for="promo">Promo Code:</label>
+      <input type="text" id="promo" placeholder="e.g. EARLYBIRD">
+
+      <p id="totalPrice">Estimated Total: ₹0</p>
+
+      <button type="submit" disabled>Book Now</button>
+    </form>
+  </section>
+
+  <!-- ====== GALLERY SECTION ====== -->
+  <section id="gallery">
+    <h2>Travel Gallery</h2>
+    <div class="gallery-grid">
+      <img src="PHOTOS/photo2.jpg" 
+           alt="Beach Paradise"
+           title="Beach Paradise">
+      <img src="PHOTOS/photo1.jpg" 
+           alt="Mountain Retreat"
+           title="Mountain Retreat">
+      <img src="PHOTOS/paris.jpg"
+           alt="City Lights"
+           title="City Lights" >
+      <img src="PHOTOS/premium_photo-1661914240950-b0124f20a5c1.jpeg"
+           alt="Forest Escape"
+           title="Forest Escape" >
+
+    </div>
+  </section>
+
+  <!-- ====== IMAGE MODAL ====== -->
+  <div class="modal" id="imgModal">
+    <span class="close">&times;</span>
+    <img id="modalImg" src="" alt="">
+  </div>
+
+  <footer>© 2025 Travel Packages Portal | Developed by Gaurang Bahri</footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
